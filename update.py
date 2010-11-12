@@ -11,7 +11,7 @@ print
 #cmd = 'sudo /bin/su ondrej -c "/bin/sh update.sh"'
 cmd = '/bin/sh update.sh'
 print "Running update script."
-output, r = run(cmd, timeout=10)
+output, r = run(cmd, timeout=15)
 print "  Done."
 print "Return code:", r
 print "Output:"

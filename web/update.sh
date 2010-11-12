@@ -14,6 +14,7 @@ if [ "$user" != "$user_allowed" ]; then
     exit 1
 fi
 
+export PYTHONPATH=/home/ondrej/usr/lib/python:$PYTHONPATH
 
 CONFIG_DIR=c
 cd /home/ondrej/repos/femhub-online-lab

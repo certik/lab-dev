@@ -8,8 +8,8 @@ from util import run
 print "Content-type: text/plain"
 print
 
-#cmd = 'sudo /bin/su ondrej -c "/bin/sh update.sh"'
-cmd = '/bin/sh update.sh'
+cmd = 'sudo /bin/su ondrej -c "/bin/sh update.sh"'
+#cmd = '/bin/sh update.sh'
 print "Running update script."
 output, r = run(cmd, timeout=15)
 print "  Done."

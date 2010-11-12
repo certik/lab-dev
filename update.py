@@ -8,11 +8,14 @@ import subprocess
 print "Content-type: text/plain"
 print
 
-cmd = 'sudo /bin/su git -c "/bin/sh update-hermes-repo.sh"'
+#cmd = 'sudo /bin/su ondrej -c "/bin/sh update.sh"'
+cmd = '/bin/sh update.sh'
 print "Running update script."
 p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE,
     stderr=subprocess.STDOUT)
-output = p.stdout.read()
+output = p.communicate()[0]
+r = p.returncode
 print "  Done."
+print "Return code:", r
 print "Output:"
 print output

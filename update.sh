@@ -17,3 +17,10 @@ echo "Updating repository..."
 cd /home/ondrej/repos/femhub-online-lab
 git pull origin master
 echo "  Done."
+
+echo "  Updating the online lab:"
+git clean -dfx
+CONF=c
+mkdir $CONF
+bin/onlinelab core init --home=$CONF/core-home --ui-path=$CONF/ui
+bin/onlinelab service init --home=$CONF/service-home

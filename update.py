@@ -18,4 +18,5 @@ r = p.returncode
 print "  Done."
 print "Return code:", r
 print "Output:"
+print
 print output

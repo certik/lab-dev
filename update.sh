@@ -20,7 +20,8 @@ echo "  Done."
 
 echo "  Updating the online lab:"
 git clean -dfx
-CONF=c
-mkdir $CONF
-bin/onlinelab core init --home=$CONF/core-home --ui-path=$CONF/ui
-bin/onlinelab service init --home=$CONF/service-home
+CONFIG_DIR=c
+mkdir $CONFIG_DIR
+cp -r ui $CONFIG_DIR/
+bin/onlinelab core init --home=$CONFIG_DIR/core-home --ui-path=$CONFIG_DIR/ui
+bin/onlinelab service init --home=$CONFIG_DIR/service-home

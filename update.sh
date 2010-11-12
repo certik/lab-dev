@@ -36,3 +36,5 @@ bin/onlinelab service init --home=$CONFIG_DIR/service-home
 echo "Starting the online lab:"
 bin/onlinelab core start --home=$CONFIG_DIR/core-home
 bin/onlinelab service start --home=$CONFIG_DIR/service-home
+
+echo "Update script done."
